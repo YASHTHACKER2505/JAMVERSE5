@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jamverse Bhuj — Entry Ticket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./ticket.css">
+</head>
+<body>
+
+  <div class="ticket">
+
+    <!-- LEFT STUB (MAIN PANEL) -->
+    <div class="stub stub-left">
+      <div class="top-row">
+        <div class="tagline">LIVE MUSIC.<br>UNLIMITED VIBES.</div>
+        <div class="status-badge">{{STATUS}}</div>
+      </div>
+
+      <div class="brand">
+        <h1 class="brand-title">JAMVERSE</h1>
+        <h2 class="brand-sub">BHUJ</h2>
+        <p class="brand-line">FEEL THE MUSIC. LIVE THE MOMENT.</p>
+      </div>
+
+      <div class="details-card">
+        <div class="card-heading">
+          <span class="star">★</span> {{FULL_NAME}} <span class="star">★</span>
+        </div>
+        <div class="pass-tag">OFFICIAL ENTRY PASS</div>
+
+        <div class="details-body">
+          <div class="details-list">
+            <div class="detail-row">
+              <span class="icon">🎟</span>
+              <div>
+                <div class="detail-label">BOOKING ID</div>
+                <div class="detail-value accent">{{BOOKING_ID}}</div>
+              </div>
+            </div>
+            <div class="detail-row">
+              <span class="icon">👥</span>
+              <div>
+                <div class="detail-label">TICKETS</div>
+                <div class="detail-value">{{TICKETS}}</div>
+              </div>
+            </div>
+            <div class="detail-row">
+              <span class="icon">📅</span>
+              <div>
+                <div class="detail-label">DATE</div>
+                <div class="detail-value">12 JULY 2026<br><span class="sub">SATURDAY</span></div>
+              </div>
+            </div>
+            <div class="detail-row">
+              <span class="icon">🕗</span>
+              <div>
+                <div class="detail-label">TIME</div>
+                <div class="detail-value">08:00 PM<br><span class="sub">ONWARDS</span></div>
+              </div>
+            </div>
+            <div class="detail-row">
+              <span class="icon">📍</span>
+              <div>
+                <div class="detail-label">VENUE</div>
+                <div class="detail-value">HVR GROUND<br><span class="sub">BHUJ, GUJARAT</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qr-block">
+            <div class="qr-box">
+              <img src="{{QR_CODE}}" alt="QR Code" class="qr-img">
+            </div>
+            <div class="scan-tag">SCAN AT ENTRY</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="policy-row">
+        <div class="policy-item">
+          <span class="policy-icon">🪪</span>
+          <span>CARRY<br>VALID ID</span>
+        </div>
+        <div class="policy-item">
+          <span class="policy-icon">🛡</span>
+          <span>NON<br>TRANSFERABLE</span>
+        </div>
+        <div class="policy-item">
+          <span class="policy-icon">🚫</span>
+          <span>NO<br>REFUND</span>
+        </div>
+        <div class="policy-item">
+          <span class="policy-icon">🏟</span>
+          <span>GATE OPENS<br>07:00 PM</span>
+        </div>
+      </div>
+
+      <div class="footer-line">SEE YOU AT JAMVERSE! <span class="heart">❤</span></div>
+    </div>
+
+    <!-- PERFORATION -->
+    <div class="perforation">
+      <div class="notch notch-top"></div>
+      <div class="dashed-line"></div>
+      <div class="notch notch-bottom"></div>
+    </div>
+
+    <!-- RIGHT STUB -->
+    <div class="stub stub-right">
+      <div class="entry-badge">★ ENTRY TICKET ★</div>
+
+      <div class="logo-circle">
+        <span class="logo-note">♪</span>
+      </div>
+      <div class="side-brand">JAMVERSE</div>
+      <div class="side-brand-sub">— BHUJ —</div>
+
+      <div class="booking-id-box">
+        <div class="booking-id-label">BOOKING ID</div>
+        <div class="booking-id-value">{{BOOKING_ID}}</div>
+      </div>
+
+      <div class="side-detail">
+        <div class="side-label">NAME</div>
+        <div class="side-value">{{FULL_NAME}}</div>
+      </div>
+      <div class="side-detail">
+        <div class="side-label">TICKETS</div>
+        <div class="side-value">{{TICKETS}}</div>
+      </div>
+      <div class="side-detail">
+        <div class="side-label">DATE</div>
+        <div class="side-value accent">12 JULY 2026</div>
+      </div>
+      <div class="side-detail">
+        <div class="side-label">TIME</div>
+        <div class="side-value accent">08:00 PM<br><span class="sub">ONWARDS</span></div>
+      </div>
+      <div class="side-detail">
+        <div class="side-label">VENUE</div>
+        <div class="side-value accent">HVR GROUND<br><span class="sub">BHUJ, GUJARAT</span></div>
+      </div>
+
+      <div class="barcode">
+        <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" class="barcode-svg">
+          <g fill="#000">
+            <rect x="0" y="0" width="2" height="50"/><rect x="4" y="0" width="1" height="50"/>
+            <rect x="7" y="0" width="3" height="50"/><rect x="12" y="0" width="1" height="50"/>
+            <rect x="15" y="0" width="2" height="50"/><rect x="19" y="0" width="1" height="50"/>
+            <rect x="22" y="0" width="1" height="50"/><rect x="25" y="0" width="3" height="50"/>
+            <rect x="30" y="0" width="1" height="50"/><rect x="34" y="0" width="2" height="50"/>
+            <rect x="38" y="0" width="1" height="50"/><rect x="41" y="0" width="3" height="50"/>
+            <rect x="46" y="0" width="1" height="50"/><rect x="49" y="0" width="2" height="50"/>
+            <rect x="53" y="0" width="1" height="50"/><rect x="56" y="0" width="3" height="50"/>
+            <rect x="61" y="0" width="1" height="50"/><rect x="64" y="0" width="1" height="50"/>
+            <rect x="67" y="0" width="2" height="50"/><rect x="71" y="0" width="3" height="50"/>
+            <rect x="76" y="0" width="1" height="50"/><rect x="79" y="0" width="2" height="50"/>
+            <rect x="83" y="0" width="1" height="50"/><rect x="86" y="0" width="1" height="50"/>
+            <rect x="89" y="0" width="3" height="50"/><rect x="94" y="0" width="1" height="50"/>
+            <rect x="97" y="0" width="2" height="50"/><rect x="101" y="0" width="1" height="50"/>
+            <rect x="104" y="0" width="3" height="50"/><rect x="109" y="0" width="1" height="50"/>
+            <rect x="112" y="0" width="2" height="50"/><rect x="116" y="0" width="1" height="50"/>
+            <rect x="119" y="0" width="1" height="50"/><rect x="122" y="0" width="3" height="50"/>
+            <rect x="127" y="0" width="1" height="50"/><rect x="130" y="0" width="2" height="50"/>
+            <rect x="134" y="0" width="1" height="50"/><rect x="137" y="0" width="3" height="50"/>
+            <rect x="142" y="0" width="1" height="50"/><rect x="145" y="0" width="1" height="50"/>
+            <rect x="148" y="0" width="2" height="50"/><rect x="152" y="0" width="3" height="50"/>
+            <rect x="157" y="0" width="1" height="50"/><rect x="160" y="0" width="2" height="50"/>
+            <rect x="164" y="0" width="1" height="50"/><rect x="167" y="0" width="3" height="50"/>
+            <rect x="172" y="0" width="1" height="50"/><rect x="175" y="0" width="2" height="50"/>
+            <rect x="179" y="0" width="1" height="50"/><rect x="182" y="0" width="1" height="50"/>
+            <rect x="185" y="0" width="3" height="50"/><rect x="190" y="0" width="1" height="50"/>
+            <rect x="193" y="0" width="2" height="50"/><rect x="197" y="0" width="2" height="50"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="thank-you">★ THANK YOU! ★</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
