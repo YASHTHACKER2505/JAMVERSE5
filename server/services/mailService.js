@@ -1,11 +1,17 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
 
 export const sendApprovalMail = async (booking, pdfBuffer) => {
   try {
-    const { data, error } = await resend.emails.send({
-      from: "JamVerse Bhuj <onboarding@resend.dev>", // swap once your domain is verified
+    const info = await transporter.sendMail({
+      from: `"JamVerse Bhuj" <${process.env.EMAIL_USER}>`,
       to: booking.email,
       subject: "🎵 Your JamVerse Ticket is Confirmed!",
       html: `
@@ -31,15 +37,12 @@ export const sendApprovalMail = async (booking, pdfBuffer) => {
         {
           filename: `JamVerse-${booking.bookingId}.pdf`,
           content: pdfBuffer, // Buffer works directly, no base64 conversion needed
+          contentType: "application/pdf",
         },
       ],
     });
 
-    if (error) {
-      console.error("❌ Resend Error:", error);
-      return;
-    }
-    console.log("✅ Approval Email Sent:", data.id);
+    console.log("✅ Approval Email Sent:", info.messageId);
   } catch (err) {
     console.error("❌ Unexpected error:", err);
   }
